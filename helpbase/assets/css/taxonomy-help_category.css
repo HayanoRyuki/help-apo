@@ -1,0 +1,86 @@
+/* taxonomy-help_category.css */
+
+/* ベースとなるラップクラス */
+.taxonomy-help-category-page {
+  max-width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* 見出しの調整 */
+.taxonomy-help-category-page h1,
+.taxonomy-help-category-page h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* 記事一覧リスト */
+.taxonomy-help-category-page ul.help-article-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* アイテム間の隙間 */
+}
+
+/* リストアイテム */
+.taxonomy-help-category-page ul.help-article-list li {
+  width: calc(50% - 0.5rem); /* 2列に */
+  margin-bottom: 1rem;
+}
+
+/* 記事タイトルリンク */
+.taxonomy-help-category-page ul.help-article-list li a {
+  display: flex;               /* flexboxで縦方向中央揃え */
+  align-items: center;
+  justify-content: flex-start; /* 横方向は左揃え */
+  text-align: left;
+
+  padding: 0 1em;
+  height: calc(1.4em * 2 + 1.2em); /* 2行分の高さ + padding上下 */
+  line-height: 1.4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--color-link, #0072FF);
+  text-decoration: none;
+
+  /* テキスト折り返しと省略 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+
+  /* 複数行制限 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 0.6em;
+}
+
+/* ホバー時の色変化 */
+.taxonomy-help-category-page ul.help-article-list li a:hover {
+  background-color: var(--color-bg-hover, #D2F1FF);
+  border-color: var(--color-link-hover, #005FCC);
+  color: var(--color-link-hover, #005FCC);
+}
+
+/* スマホ以下は1列に（お好みで調整可能） */
+@media screen and (max-width: 767px) {
+  .taxonomy-help-category-page ul.help-article-list li {
+    width: 100%;
+  }
+}
+
+.taxonomy-help-category-page ul.help-article-list li {
+  width: calc(50% - 0.5rem);
+  margin-bottom: 0.2rem; /* ここを0.4remなどに減らす */
+}
+
+.taxonomy-help-category-page ul.help-article-list li a {
+  padding: 0.8em 1em 0.4em 1em; /* 上：1.2em、右：1em、下：0.2em、左：1em */
+  /* 他のスタイルはそのまま */
+}

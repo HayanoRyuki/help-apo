@@ -1,0 +1,186 @@
+/* ========================================
+   ページ全体レイアウト（高さ・余白・背景）
+======================================== */
+html,
+body {
+  height: 100%;
+}
+
+.site-header {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: none;
+}
+
+.site-main {
+  padding-top: 80px; /* 実際のヘッダー高さに合わせて調整 */
+  min-height: calc(100vh - 300px); /* フッター浮き防止 */
+}
+
+.single-status {
+  background-color: #F9FAFB; /* アーカイブと統一 */
+}
+
+/* ========================================
+   レイアウト：2カラム構造（コンテンツ幅制限）
+======================================== */
+.single-status-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.main-column {
+  flex: 1 1 70%;
+}
+
+.sidebar-column {
+  flex: 1 1 30%;
+}
+
+/* ========================================
+   本文：タイトル・日付・ラベル
+======================================== */
+.status-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.status-date {
+  color: #999;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.status-label {
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 1em 0;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+.status-label.resolved {
+  background-color: var(--color-resolved-bg);
+  color: var(--color-resolved-text);
+  border: 1px solid var(--color-resolved-border);
+}
+
+.status-label.unresolved {
+  background-color: var(--color-unresolved-bg);
+  color: var(--color-unresolved-text);
+  border: 1px solid var(--color-unresolved-border);
+}
+
+/* ========================================
+   本文装飾：見出しや段落
+======================================== */
+.status-content {
+  line-height: 1.7;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.status-content h4 {
+  font-size: 1rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.status-content b {
+  display: block;
+  margin-top: 1.2em;
+  font-weight: bold;
+}
+
+/* ========================================
+   サイドバー：過去の障害情報
+======================================== */
+.status-sidebar {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+}
+
+.status-sidebar h2.sidebar-heading {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+.status-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.status-list li {
+  margin-bottom: 10px;
+}
+
+.status-list a {
+  text-decoration: none;
+  color: #0072FF;
+}
+
+.status-list a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   レスポンシブ対応（モバイル）
+======================================== */
+@media screen and (max-width: 768px) {
+  .single-status-inner {
+    flex-direction: column;
+  }
+
+  .main-column,
+  .sidebar-column {
+    flex: 1 1 100%;
+  }
+
+  .status-sidebar {
+    margin-top: 2rem;
+  }
+}
+
+/* ========================================
+   デザイン開発用
+======================================== */
+/* 掲載日の見出し */
+.status-published {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 1.5em 0 0.8em;
+  color: #333;
+}
+
+/* 追記情報ボックス */
+.status-update-box {
+  margin: 2em 0;
+  padding: 1.2em 1.5em;
+  border-left: 4px solid #00a0e9; /* ブランドブルーで安心感 */
+  background: #f9fcff;           /* 薄いブルーで区切り */
+  border-radius: 6px;
+}
+
+.status-update-box h4 {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0073aa; /* 青系で「更新感」を演出 */
+}
+
+.status-update-box p {
+  margin: 0.6em 0;
+  line-height: 1.6;
+}
+

@@ -1,0 +1,986 @@
+/* ========================
+  Hero Section（全体レイアウト）
+======================== */
+.hero-section {
+  background-color: var(--color-hero-bg);
+  padding: 4rem 1rem 1rem; /* ← 下だけ減らす */
+  color: var(--color-dark);
+}
+
+.hero-inner.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-inner.two-column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-search {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-search input[type="search"],
+  .hero-search button {
+    width: 100%;
+  }
+}
+
+/* ========================
+  Hero Title
+======================== */
+.hero-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+/* ========================
+  検索フォーム（左カラム）
+======================== */
+.hero-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-search input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.hero-search input::placeholder {
+  color: #999;
+}
+
+.hero-search button {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-primary-hover);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.hero-search button:hover {
+  background-color: #00A0C6;
+}
+
+
+/* ========================
+  お問い合わせリンク（右カラム）
+======================== */
+.hero-contact-link {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.hero-contact-link a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+  background-color: var(--color-white);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.hero-contact-link a:hover {
+  background-color: var(--color-link);
+  color: var(--color-white);
+}
+
+
+/* 補足説明テキスト（右カラム） */
+.hero-subtext {
+  margin-top: auto !important;
+  font-size: 0.95rem;
+  color: var(--color-sub);
+  line-height: 1.6;
+  text-align: left;
+}
+/* HERO全体で高さを揃えるための追加 */
+.hero-inner.two-column {
+  align-items: flex-end; /* 中央揃え → 下端揃えに変更 */
+}
+
+/* ========================
+  検索結果
+======================== */
+#search-results,
+.search-results {
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: var(--color-dark);
+}
+
+#search-results:empty {
+  display: none;
+}
+
+.result-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: bold;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+.no-result {
+  color: #999;
+  text-align: center;
+}
+
+
+/* ========================
+  メニューリンク
+======================== */
+.hero-links {
+  background-color: var(--color-hero-bg);
+  padding: 2rem 1rem;
+  margin-top: 0;  /* ← 追加 or 調整 */
+}
+
+.hero-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.hero-link-list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-dark); /* ←これが必要！黒系に */
+  gap: 1rem;
+}
+
+.hero-link-list li a:hover {
+  text-decoration: underline;
+}
+
+.hero-link-list .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.hero-link-list li a:hover .icon {
+  filter: brightness(1.2) invert(1);
+}
+
+/* ========================
+  Hero Links（メニューリンク3種）
+======================== */
+.hero-links {
+  background-color: var(--color-hero-bg); /* ← ここをネイビーから統一色に変更 */
+  padding: 2.5rem 1rem;
+}
+.hero-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.hero-link-list li {
+  flex: 1 1 30%;
+  background-color: var(--color-white); /* ボックス背景：白 */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+.hero-link-list li:hover {
+  background-color: var(--color-bg-hover, #F0F9FC);
+  transform: translateY(-3px);
+}
+
+.hero-link-list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  color: var(--color-dark);  /* テキストは濃い色 */
+  font-weight: bold;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.hero-link-list li a:hover {
+  text-decoration: none;
+}
+
+.hero-link-list .icon {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  filter: none; /* 通常表示 */
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  .hero-link-list {
+    flex-direction: column;
+  }
+
+  .hero-link-list li {
+    width: 100%;
+  }
+}
+
+.hero-link-list li {
+  position: relative;
+}
+
+.badge-new {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background-color: #EF174A;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 10;
+}
+
+
+/* ========================
+  Hero Section（全体レイアウト）
+======================== */
+.hero-section {
+  background-color: var(--color-hero-bg);
+  padding: 4rem 1rem 1rem; /* ← 下だけ減らす */
+  color: var(--color-dark);
+}
+
+.hero-inner.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-inner.two-column {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-search {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-search input[type="search"],
+  .hero-search button {
+    width: 100%;
+  }
+}
+
+/* ========================
+  Hero Title
+======================== */
+.hero-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+/* ========================
+  検索フォーム（左カラム）
+======================== */
+.hero-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-search input[type="search"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.hero-search input::placeholder {
+  color: #999;
+}
+
+.hero-search button {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-primary-hover);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.hero-search button:hover {
+  background-color: #00A0C6;
+}
+
+
+/* ========================
+  お問い合わせリンク（右カラム）
+======================== */
+.hero-contact-link {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.hero-contact-link a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+  background-color: var(--color-white);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.hero-contact-link a:hover {
+  background-color: var(--color-link);
+  color: var(--color-white);
+}
+
+
+/* 補足説明テキスト（右カラム） */
+.hero-subtext {
+  margin-top: auto !important;
+  font-size: 0.95rem;
+  color: var(--color-sub);
+  line-height: 1.6;
+  text-align: left;
+}
+/* HERO全体で高さを揃えるための追加 */
+.hero-inner.two-column {
+  align-items: flex-end; /* 中央揃え → 下端揃えに変更 */
+}
+
+/* ========================
+  検索結果
+======================== */
+#search-results,
+.search-results {
+  background-color: var(--color-white) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  color: var(--color-dark);
+}
+
+#search-results:empty {
+  display: none;
+}
+
+.result-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: bold;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+.no-result {
+  color: #999;
+  text-align: center;
+}
+
+
+/* ========================
+  メニューリンク
+======================== */
+.hero-links {
+  background-color: var(--color-hero-bg);
+  padding: 2rem 1rem;
+  margin-top: 0;  /* ← 追加 or 調整 */
+}
+
+.hero-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.hero-link-list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-dark); /* ←これが必要！黒系に */
+  gap: 1rem;
+}
+
+.hero-link-list li a:hover {
+  text-decoration: underline;
+}
+
+.hero-link-list .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.hero-link-list li a:hover .icon {
+  filter: brightness(1.2) invert(1);
+}
+
+/* ========================
+  Hero Links（メニューリンク3種）
+======================== */
+.hero-links {
+  background-color: var(--color-hero-bg); /* ← ここをネイビーから統一色に変更 */
+  padding: 2.5rem 1rem;
+}
+.hero-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+.hero-link-list li {
+  flex: 1 1 30%;
+  background-color: var(--color-white); /* ボックス背景：白 */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+.hero-link-list li:hover {
+  background-color: var(--color-bg-hover, #F0F9FC);
+  transform: translateY(-3px);
+}
+
+.hero-link-list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  color: var(--color-dark);  /* テキストは濃い色 */
+  font-weight: bold;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.hero-link-list li a:hover {
+  text-decoration: none;
+}
+
+.hero-link-list .icon {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  filter: none; /* 通常表示 */
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  .hero-link-list {
+    flex-direction: column;
+  }
+
+  .hero-link-list li {
+    width: 100%;
+  }
+}
+
+.hero-link-list li {
+  position: relative;
+}
+
+.badge-new {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background-color: #EF174A;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 10;
+}
+
+
+/* ========================
+  おすすめ記事まとめセクション
+======================== */
+.recommended-section {
+  background-color: var(--color-bg-light);
+  padding: 40px 0;
+}
+
+.recommended-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.recommended-block {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* PCもタブレットも2列 */
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch; /* 高さも揃う */
+}
+
+.recommended-block {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  width: 100%; /* grid任せ */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important; /* ← 最優先で上揃え */
+}
+
+
+.recommended-header {
+  background-color: var(--color-section-header);
+  padding: 16px 24px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.recommended-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.recommended-columns {
+  padding: 24px;
+	 flex-grow: 0 !important; /* ← 中身を中央に押し広げない */
+}
+
+.recommended-group-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary-blue);
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+.recommended-group-title:first-of-type {
+  margin-top: 0;
+}
+
+.recommended-group ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.recommended-group li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+  font-size: 0.95rem;
+}
+
+.recommended-group li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary-blue);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.recommended-group a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.recommended-group a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+}
+
+.recommended-footer {
+  padding: 16px 24px;
+  text-align: right;
+}
+
+.recommended-link {
+  background-color: var(--color-primary-hover); /* ← ボタンと同じ色に統一 */
+  color: var(--color-white);
+  padding: 0.8rem 1.5rem; 
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.recommended-link:hover {
+  background-color: #00A0C6; /* ボタンと同様のhover色 */
+}
+
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  .recommended-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.recommended-grid {
+  align-items: flex-start;
+}
+
+.adjust-link-box {
+  border-radius: 8px;
+  background-color: transparent; /* ← 背景なしに */
+  font-size: 0.95rem;
+  color: var(--color-sub);
+  line-height: 1.6;
+}
+
+.adjust-link-box a {
+  font-weight: bold;
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.adjust-link-box a:hover {
+  color: var(--color-link-hover);
+}
+
+
+/* スマホ：1列 */
+@media screen and (max-width: 768px) {
+  .recommended-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ========================
+  おすすめ記事まとめセクション
+======================== */
+.recommended-section {
+  background-color: var(--color-bg-light);
+  padding: 40px 0;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* PCもタブレットも2列 */
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch; /* 高さも揃える */
+}
+
+.recommended-block {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  width: 100%; /* grid任せ */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recommended-header {
+  background-color: var(--color-section-header);
+  padding: 16px 24px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.recommended-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.recommended-columns {
+  padding: 24px;
+}
+
+.recommended-group-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primary-blue);
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+.recommended-group-title:first-of-type {
+  margin-top: 0;
+}
+
+.recommended-group ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.recommended-group li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+  font-size: 0.95rem;
+}
+
+.recommended-group li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary-blue);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.recommended-group a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.recommended-group a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+}
+
+.recommended-footer {
+  padding: 16px 24px;
+  text-align: right;
+}
+
+.recommended-link {
+  background-color: var(--color-primary-hover); /* ボタン色 */
+  color: var(--color-white);
+  padding: 0.8rem 1.5rem; 
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.recommended-link:hover {
+  background-color: #00A0C6; /* hover色 */
+}
+
+/* スマホ：1列 */
+@media screen and (max-width: 768px) {
+  .recommended-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.adjust-link-box {
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 0.95rem;
+  color: var(--color-sub);
+  line-height: 1.6;
+}
+
+.adjust-link-box a {
+  font-weight: bold;
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.adjust-link-box a:hover {
+  color: var(--color-link-hover);
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1100px;   /* ← 横幅制御を追加 */
+  margin: 0 auto;      /* ← 中央寄せ */
+  align-items: stretch;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* デフォルトは2列 */
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* スマホ：1列 */
+@media screen and (max-width: 768px) {
+  .recommended-grid {
+    grid-template-columns: 1fr !important; /* ← 強制的に上書き */
+    gap: 24px;
+  }
+}

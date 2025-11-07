@@ -1,0 +1,33 @@
+/* お知らせ詳細ページのスタイル */
+.single-notice {
+  background: var(--color-white);
+  width: 100%;
+}
+
+.single-notice-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.notice-article {
+  /* 中央寄せ・余白はinnerで制御するので、ここは不要 */
+}
+
+.notice-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.notice-date {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.notice-content {
+  line-height: 1.8;
+  font-size: 1rem;
+}

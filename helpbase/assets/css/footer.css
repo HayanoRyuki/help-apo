@@ -1,0 +1,60 @@
+.site-footer {
+  background: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-inner.minimal-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  height: 48px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--color-border);
+  margin-top: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap; /* ← 折り返し可能にする */
+  justify-content: center;
+  gap: 1rem 2rem;  /* ← 行間・列間の調整 */
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  max-width: 800px; /* 必要に応じて制限 */
+}

@@ -1,0 +1,25 @@
+
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-rich-black);
+}
+
+a {
+  color: var(--color-primary-blue);
+}
+
+.btn {
+  background-color: var(--color-accent-green);
+  color: var(--color-white);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-blue);
+}
+
+.sidebar {
+  background-color: var(--color-rich-black);
+  color: var(--color-white);
+}
+

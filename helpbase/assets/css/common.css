@@ -1,0 +1,108 @@
+:root {
+  --color-primary: #0098BB;
+  --color-primary-hover: #126C84;
+  --color-primary-blue: #00AED4;
+  --color-accent: #191817;
+  --color-accent-green: #00C6CC;
+  --color-border: #A8A19D;
+  --color-dark: #2A2929;
+  --color-sub: #413C3A;
+  --color-white: #FFFFFF;
+  --color-rich-black: #0B1626;
+  --color-bg-light: #EFF8F5;
+  --color-bg-hover: #F3FAF7;
+  --color-highlight: #D2E9E7;
+  --color-hero-bg: #D6EDE5;
+  --color-link: #00AED4;
+  --color-link-hover: #0081A1;
+  --color-section-header: #bde2d5;
+	
+	  --color-archive-title: #1C2739;
+  --color-archive-link: #00B5E2;
+  --color-archive-link-hover: #00B7B1;
+  --color-archive-date: #38405F;
+  --color-archive-bg: #F9FAFB;
+  --color-pagination: #00AEEF;
+	
+	  --color-resolved-bg: #00AEEF;  /* 明るい青 */
+  --color-resolved-text: #FFFFFF; /* 白文字 */
+	  --color-unresolved-bg: #FFF3F0;
+  --color-unresolved-text: #C0371A;
+  --color-unresolved-border: #C0371A;
+}
+body {
+  font-family:
+    'Helvetica Neue',
+    'Yu Gothic',
+    'YuGothic',
+    'Hiragino Kaku Gothic ProN',
+    'Noto Sans JP',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+a {
+  color: var(--color-primary-blue);
+}
+.btn {
+  background-color: var(--color-accent-green);
+  color: var(--color-white);
+}
+.btn:hover {
+  background-color: var(--color-primary-blue);
+}
+.sidebar {
+  background-color: var(--color-rich-black);
+  color: var(--color-white);
+}
+body {
+  font-family:
+    'Helvetica Neue',
+    'Noto Sans JP',
+    'Yu Gothic',
+    'Hiragino Kaku Gothic ProN',
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.document-link-list {
+  list-style: none;       /* デフォルトの「・」を消す */
+  margin: 0;
+  padding: 0;
+}
+
+.document-link-list li {
+  margin: 0.5em 0;        /* リンク同士の余白 */
+}
+
+.document-link-list a {
+  display: flex;          /* アイコンと文字を横並び */
+  align-items: center;    /* 縦位置を揃える */
+  gap: 6px;               /* アイコンと文字の間隔 */
+  text-decoration: none;  /* 下線を消す（必要なら） */
+  color: #004080;         /* テーマカラーに調整 */
+}
+
+.document-link-list a:hover {
+  text-decoration: underline;
+}
+
+.error-block {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+.error-message {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.error-solution ul {
+  margin: 0;
+  padding-left: 20px;
+}

@@ -1,0 +1,101 @@
+/* アーカイブページ全体ラッパー */
+.archive-release {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: transparent; /* 背景は body に任せる */
+}
+
+/* アーカイブタイトル */
+.release-archive .archive-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: var(--color-archive-title);
+  text-align: left;
+}
+
+/* 共通リスト */
+.release-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.release-item {
+  margin-bottom: 16px;
+}
+
+.release-item a {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--color-archive-link);
+}
+
+.release-item a:hover {
+  color: var(--color-archive-link-hover);
+}
+
+/* 日付・タイトル */
+.release-date {
+  flex: 0 0 100px;
+  font-size: 0.9rem;
+  color: var(--color-archive-date);
+  font-weight: bold;
+}
+
+.release-title {
+  flex: 1;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.release-item a:hover .release-title {
+  opacity: 0.8;
+}
+
+/* 解決済みラベル（status専用） */
+.resolved-label {
+  display: inline-block;
+  background-color: var(--color-resolved-bg);
+  color: var(--color-resolved-text);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.2em 0.6em;
+  border-radius: 1em; /* pill型 */
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+/* ページ全体背景 */
+body {
+  background-color: var(--color-archive-bg);
+}
+
+/* ページネーション */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-numbers {
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+  color: var(--color-pagination);
+  border-radius: 4px;
+}
+
+.page-numbers.current {
+  background: var(--color-pagination);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.page-numbers:hover {
+  text-decoration: underline;
+}

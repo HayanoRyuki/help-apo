@@ -1,0 +1,77 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ヘルプカテゴリ一覧ページ全体 */
+.help-category-list-page {
+  padding: 4rem 1rem;
+}
+
+/* グリッド配置（PCでは3カラム、レスポンシブ対応） */
+.help-category-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* 各カテゴリカード */
+.help-category-group {
+  padding: 1.5rem;
+  background: var(--color-bg-light, #F9FBFD);
+  border: 1px solid var(--color-border, #DCE3EB);
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.help-category-group:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* カテゴリ見出し（リンク付き） */
+.help-category-title a {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-dark, #1C2739);
+  border-left: 5px solid var(--color-primary);
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.help-category-title a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* 説明文 */
+.term-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* 子カテゴリリスト */
+.help-subcategory-list {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.help-subcategory-list li {
+  margin: 0.5rem 0;
+}
+
+.help-subcategory-list li a {
+  text-decoration: none;
+  color: var(--color-link, #0072FF);
+  font-weight: 500;
+}
+
+.help-subcategory-list li a:hover {
+  color: var(--color-link-hover, #005FCC);
+}

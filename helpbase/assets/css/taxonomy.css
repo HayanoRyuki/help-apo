@@ -1,0 +1,21 @@
+.taxonomy-archive .archive-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.taxonomy-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taxonomy-post-item {
+  margin-bottom: 1rem;
+}
+
+.taxonomy-post-item a {
+  text-decoration: none;
+  color: #0072FF;
+  font-weight: 500;
+}

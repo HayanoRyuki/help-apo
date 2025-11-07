@@ -1,0 +1,1062 @@
+:root {
+  --color-check-bg: #FFF2F5;
+  --color-check-border: #EF174A;
+  --color-tips-bg: #F1FBF6;
+  --color-tips-border: #00A94F;
+  --color-label-text: #fff;
+}
+
+
+/* ===============================
+   本文はみ出し防止（追加CSS）
+=============================== */
+.help-article-body {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+/* 画像・テーブル・コードブロックのはみ出し防止 */
+.help-article-body img,
+.help-article-body table,
+.help-article-body pre {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.help-article-body img,
+.help-article-body table,
+.help-article-body pre {
+  max-width: 100% !important;
+  width: auto !important;
+  overflow-x: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+.c-title--page {
+  font-size: 1.75rem;   /* 約28px相当 */
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* =======================================
+   レイアウト
+======================================= */
+.l-container--2col {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+	  gap: 2rem;         /* 左右カラムの間隔 */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.l-container__col--main {
+  flex: 1;
+}
+
+.l-container__col--sub {
+  flex: 0 0 280px;
+}
+
+
+/* =======================================
+   本文エリア（見出し・段落・リンク）
+======================================= */
+.l-container__col--main h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.help-article-body h2,
+.help-article-body h3 {
+  color: var(--color-accent);
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+}
+
+.help-article-body h2 {
+  font-size: 1.75rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.4rem;
+}
+
+.help-article-body h3 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.help-article-body p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.help-article-body a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.help-article-body a:hover {
+  text-decoration: underline;
+}
+
+
+/* =======================================
+   ラベルボックス（Check / Tips）
+======================================= */
+.check-box,
+.tips-box {
+  padding: 1.2em 1.5em;
+  margin: 2em 0;
+  border-radius: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.check-box {
+  background-color: var(--color-check-bg);
+  border-left: 4px solid var(--color-check-border);
+}
+
+.tips-box {
+  background-color: var(--color-tips-bg);
+  border-left: 4px solid var(--color-tips-border);
+}
+
+.check-box p,
+.tips-box p {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+
+.label-tag {
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+  color: var(--color-label-text);
+  flex-shrink: 0;
+}
+
+.label-check {
+  background-color: var(--color-check-border);
+}
+
+.label-tips {
+  background-color: var(--color-tips-border);
+}
+
+/* =======================================
+   ラベルボックス（Ref / Q&A）
+======================================= */
+.ref-box,
+.qa-box {
+  padding: 1.2em 1.5em;
+  margin: 2em 0;
+  border-radius: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.ref-box {
+  background-color: #F0F5FF;
+  border-left: 4px solid #1E50A2;
+}
+
+.qa-box {
+  background-color: #FFFAEC;
+  border-left: 4px solid #D4A017;
+}
+
+.ref-box ul {
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+.ref-box ul li {
+  list-style-type: disc;
+  margin-bottom: 0.3em;
+}
+
+.qa-box dl {
+  margin: 0;
+}
+
+.qa-box dt {
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.qa-box dd {
+  margin: 0 0 1em 1em;
+}
+
+/* ラベルタグ（Ref / Q&A） */
+.label-ref {
+  background-color: #1E50A2;
+}
+
+.label-qa {
+  background-color: #D4A017;
+}
+
+
+/* =======================================
+   ステップ表示（2カラム構成）
+======================================= */
+.step-list {
+  margin: 2em 0;
+  font-size: 1em;
+  line-height: 1.8;
+}
+
+.step-block {
+  margin-bottom: 2em;
+}
+
+.step-two-column {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.step-text {
+  flex: 1;
+}
+
+.step-image {
+  flex: 0 0 220px;
+}
+
+.step-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
+}
+
+
+/* =======================================
+   目次ボックス（左カラム）
+======================================= */
+.p-toc {
+  position: fixed;
+  top: 120px;
+  left: 40px;
+  width: 260px;
+  z-index: 1000;
+
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+
+}
+
+/* =======================================
+   目次タイトル
+======================================= */
+.p-toc__title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* =======================================
+   目次リスト（JSで自動挿入）
+======================================= */
+#toc-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#toc-list li {
+  margin-bottom: 0.5em;
+  font-size: 0.95em;
+}
+
+#toc-list a {
+  text-decoration: none;
+  color: var(--color-link);
+}
+
+#toc-list a:hover {
+  text-decoration: underline;
+}
+
+/* =======================================
+   見出し階層インデント（h2〜h4）
+======================================= */
+.toc-h2 {
+  margin-left: 0;
+  font-weight: bold;
+}
+
+.toc-h3 {
+  margin-left: 1em;
+}
+
+.toc-h4 {
+  margin-left: 2em;
+}
+
+
+/* =======================================
+   アラートボックス（例：請求書注意）
+======================================= */
+.alert-box.alert-invoice {
+  border: 2px solid #FF6666;
+  background-color: #FFF5F5;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  color: #333;
+}
+
+.alert-box.alert-invoice ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.alert-box.alert-invoice li {
+  margin: 0.25rem 0;
+}
+
+
+
+/* =======================================
+   通常の囲みボックス
+======================================= */
+.note-box {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* =======================================
+   簡易手順リスト（step-list-small）
+======================================= */
+.step-list-small {
+  margin: 1.5em 0;
+  padding-left: 1.2em;
+  font-size: 1rem;
+  line-height: 1.8;
+  counter-reset: step-num-small;
+}
+
+.step-list-small li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.step-list-small li::before {
+  counter-increment: step-num-small;
+  content: counter(step-num-small) ".";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+
+/* =======================================
+   並列選択肢（縦並び）
+======================================= */
+.parallel-options {
+  display: block;
+  margin: 2rem 0;
+}
+
+.parallel-option {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.parallel-option h3 {
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--color-dark);
+  border-left: 4px solid var(--color-link);
+  padding-left: 0.5em;
+}
+
+
+/* =======================================
+   レスポンシブ対応
+======================================= */
+@media screen and (max-width: 768px) {
+  .l-container--2col {
+    flex-direction: column;
+  }
+
+  .l-container__col--sub,
+  .l-container__col--main {
+    width: 100%;
+  }
+
+  .p-toc {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .step-two-column {
+    flex-direction: column;
+  }
+
+  .step-image {
+    flex: none;
+    margin-top: 1em;
+  }
+
+  .role-table thead {
+    display: none;
+  }
+
+  .role-table,
+  .role-table tbody,
+  .role-table tr,
+  .role-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .role-table tr {
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+  }
+
+  .role-table td {
+    padding: 0.5em 0;
+    border: none;
+    position: relative;
+  }
+
+  .role-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3em;
+    color: #444;
+  }
+}
+
+/* ===================================================
+   関連リンクカード（help_card）スタイル
+   使用例：[help_card url="URL"]
+=================================================== */
+
+/* カード全体のスタイル */
+.help-related-card {
+  position: relative;
+  border: 2px solid var(--color-accent);  /* 枠線カラーはルート変数から */
+  background-color: #F1FBFD;              /* やさしい青背景 */
+  padding: 1.6rem 1.4rem 1.2rem;           /* 上だけ余白多めに調整 */
+  margin: 2rem 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  overflow: visible;                      /* ラベルを枠外に表示するために必要 */
+  transition: box-shadow 0.2s ease;
+}
+
+/* ホバー時にふんわり影をつける */
+.help-related-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 左上からはみ出す「関連リンク」ラベル */
+.help-related-label {
+  position: absolute;
+  top: -1.4rem;                           /* 枠より上にぐいっと出す */
+  left: -1.2rem;                          /* 枠より左へもはみ出す */
+  background-color: var(--color-accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.4em 1em;
+  border-radius: 10px 10px 10px 0;        /* タグ風の左下角なし角丸 */
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* リンク全体をクリック可能に */
+.help-related-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* 記事タイトル */
+.help-related-title {
+  font-weight: bold;
+  color: var(--color-link);              /* テーマカラーでリンク感 */
+  font-size: 1rem;
+  margin: 0 0 0.6em;
+}
+
+/* 抜粋（概要文） */
+.help-related-excerpt {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text);              /* 本文カラーにあわせる */
+}
+
+/* ================================
+   2カラム構造（画像＋文）
+================================ */
+.help-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.help-two-column__text,
+.help-two-column__image {
+  flex: 1 1 48%;
+  box-sizing: border-box;
+}
+
+.help-two-column__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.help-two-column__caption {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .help-two-column {
+    flex-direction: column;
+  }
+  .help-two-column__text,
+  .help-two-column__image {
+    flex: 1 1 100%;
+  }
+}
+
+.help-article-body img {
+  display: block;
+  margin: 1.2em auto; /* 上下に余白を確保、左右中央寄せ */
+  max-width: 100%;
+  height: auto;
+}
+
+.help-notice-box {
+  background-color: #f0fafa;
+  color: #00bbb5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0.75em 1em;
+  margin: 1.5em 0;
+  border-radius: 4px;
+}
+
+.help-tags {
+  margin: 1rem 0;
+}
+
+.help-tag {
+  display: inline-block;
+  background-color: var(--color-check-bg); /* ←ここをグレー系に */
+  color: var(--color-accent);              /* ←これもグレーに変更 */
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  margin: 0 0.4rem 0.4rem 0;
+  border-radius: 4px;
+  border: 1px solid var(--color-check-border); /* ←これもグレーに */
+}
+
+.precondition-box {
+  background: #F8FCFD;
+  border-left: 6px solid #00B5E2;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+
+.precondition-box h3 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #0078A0;
+  display: flex;
+  align-items: center;
+}
+
+.checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2em;
+}
+
+.checkbox-icon {
+  color: #00B5E2;
+  font-size: 1.2em;
+  margin-right: 0.8em;
+  flex-shrink: 0;
+  margin-top: 0.2em;
+}
+
+.check-content {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 2カラム全体レイアウト */
+.help-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* 左右のカラム */
+.help-two-column .column {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+/* モバイル：縦並びに切り替え */
+@media screen and (max-width: 768px) {
+  .help-two-column {
+    flex-direction: column;
+  }
+}
+
+/* 画像まわりの余白と整列 */
+.help-two-column .help-image {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.help-two-column .help-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =======================================
+   2カラム構造（ヘルプ記事内専用）
+======================================= */
+
+.help-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+/* 左右のカラム */
+.help-two-column__left,
+.help-two-column__right {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+/* モバイル時は縦並びに */
+@media screen and (max-width: 768px) {
+  .help-two-column {
+    flex-direction: column;
+  }
+
+  .help-two-column__left,
+  .help-two-column__right {
+    flex: 1 1 100%;
+  }
+}
+
+/* 画像エリア */
+.help-two-column__image {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.help-two-column__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* キャプション */
+.help-two-column__caption {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.help-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 2em 0;
+}
+
+.help-two-column .column {
+  flex: 1 1 48%;
+  min-width: 280px;
+}
+
+.help-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+/* ===============================
+   2カラム構成：help-two-column
+================================= */
+.help-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.help-two-column .help-col {
+  flex: 1 1 48%;
+  min-width: 280px;
+}
+
+/* 画像サイズ調整 */
+.help-two-column .help-col img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .help-two-column {
+    flex-direction: column;
+  }
+  .help-two-column .help-col {
+    width: 100%;
+  }
+}
+
+.help-three-column {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.help-three-column .help-col {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===============================
+   エラー表示ボックス（RCPヘルプ用）
+================================= */
+.error-box {
+  background-color: #fff4f4;
+  border-left: 4px solid #e83e3e;
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+.error-box .error-code {
+  font-weight: bold;
+  font-size: 16px;
+  color: #c22b2b;
+  margin-bottom: 6px;
+}
+
+.error-box .error-message {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+/* ===============================
+   タブ（RCPヘルプ用）
+================================= */
+
+.rcp-tab-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.rcp-tab {
+  padding: 10px 16px;
+  cursor: pointer;
+  background-color: var(--color-white);
+  color: var(--color-sub);
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  margin-right: 4px;
+  transition: all 0.2s ease;
+}
+
+.rcp-tab:hover {
+  background-color: var(--color-highlight); /* やさしいグリーン水色 */
+  color: var(--color-accent-green);         /* アクセントグリーン */
+}
+
+.rcp-tab.active {
+  background-color: var(--color-accent-green); /* #00C6CC */
+  color: var(--color-white);
+  font-weight: bold;
+  border-color: var(--color-accent-green);
+}
+
+.rcp-tab-content {
+  display: none;
+  border: 1px solid var(--color-border);
+  border-radius: 0 0 6px 6px;
+  padding: 16px;
+  background-color: var(--color-bg-light);
+}
+
+.rcp-tab-content.active {
+  display: block;
+}
+
+
+/* =======================================
+   テーブル（権限表・設定表 共通）
+======================================= */
+
+/* テーブル共通設定 */
+.role-table,
+.help-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  table-layout: auto;
+  box-sizing: border-box;
+}
+
+/* セル共通設定 */
+.role-table th,
+.role-table td,
+.help-table th,
+.help-table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* ヘッダー色（個別指定） */
+.role-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.help-table th {
+  background-color: #f7f7f7;
+  font-weight: bold;
+  width: auto;
+}
+
+/* テーブル内リンク共通 */
+.role-table td a,
+.help-table td a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.role-table td a:hover,
+.help-table td a:hover {
+  text-decoration: underline;
+}
+
+/* テーブルラッパー */
+.role-table-wrapper,
+.help-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+/* help-table専用：自然なインライン表示を重視 */
+.help-table td,
+.help-table th {
+  word-break: normal;       /* ← break-all をやめる */
+  white-space: normal;      /* ← nowrap ではなく普通に改行可 */
+  padding: 0.9rem 1.2rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* コード列を固定幅にして折返させない */
+.help-table td:first-child {
+  white-space: nowrap;
+  width: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* スマホ時は固定解除 */
+@media screen and (max-width: 768px) {
+  .p-toc {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+
+  .l-container__col--main {
+    margin-left: 0;
+  }
+}
+
+
+/* =======================================
+   共通CTA
+======================================= */
+
+.help-cta-visual {
+  position: relative;
+  background-image: url('/wp-content/themes/helpbase/assets/css/ctabackground.webp');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin: 2em 0;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-cta-box-on-image {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.8em;
+  border: 1px solid var(--color-check-border);
+  border-radius: 10px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cta-heading {
+  font-size: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.help-breadcrumbs {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.help-breadcrumbs-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.help-breadcrumbs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-breadcrumbs-list li {
+  margin-bottom: 0.4em; /* 改行表示 */
+}
+
+.help-breadcrumbs-path a {
+  color: var(--color-primary, #0072ff);
+  text-decoration: none;
+}
+
+.help-breadcrumbs-path a:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  font-size: 1.1em; /* ›マークを少し大きく */
+  margin: 0 0.4em;
+  color: #555;
+}
+
+/* =======================================
+   レスポンシブ
+   ※ スマホでは目次非表示 + 1カラム
+======================================= */
+@media (max-width: 768px) {
+  .l-container--2col { flex-direction: column; }
+  .l-container__col--sub { display: none; }
+  .l-container__col--main { width: 100%; }
+
+  /* ステップ・テーブル（カード化） */
+  .step-two-column { flex-direction: column; }
+  .step-image { flex: none; margin-top: 1em; }
+
+  .role-table thead { display: none; }
+  .role-table, .role-table tbody, .role-table tr, .role-table td { display: block; width: 100%; }
+  .role-table tr { margin-bottom: 1.5rem; background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 1rem; }
+  .role-table td { padding: 0.5em 0; border: none; position: relative; }
+  .role-table td::before { content: attr(data-label); font-weight: bold; display: block; margin-bottom: 0.3em; color: #444; }
+}

@@ -1,0 +1,293 @@
+/* =====================================
+   Releaseページ：2カラムレイアウト
+===================================== */
+
+main.single-release.two-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+main.single-release .main-column {
+  flex: 1 1 70%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+main.single-release .sidebar-column {
+  flex: 1 1 30%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  main.single-release.two-columns {
+    flex-direction: column;
+  }
+
+  main.single-release .main-column,
+  main.single-release .sidebar-column {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* ===============================
+   最新リリース一覧スタイル
+=============================== */
+
+.latest-release-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.latest-release-list li {
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.latest-release-list li a {
+  text-decoration: none;
+  color: var(--color-text, #111);
+}
+
+.latest-release-list li a:hover {
+  opacity: 0.8;
+  color: var(--color-primary);
+}
+
+.sidebar-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.release-archive-link {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.archive-link {
+  font-size: 0.95rem;
+  color: var(--color-link, #333);
+  text-decoration: underline;
+}
+
+.archive-link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+
+/* ===============================
+   投稿日付・更新情報
+=============================== */
+
+.release-date {
+  text-align: right;
+  display: block;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.release-header .update-info {
+  text-align: right;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.release-update-box {
+  background-color: #fdf4dc;
+  color: #4b3c0a;
+  border: 1px solid #f5d89c;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 640px;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+/* ===============================
+   Tips / Check ラベル
+=============================== */
+
+.release-label {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+  background-color: #f9f9f9;
+  border-left: 6px solid;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.release-label strong {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.release-label.check {
+  border-color: #06b6d4;
+  background-color: #ecf9fb;
+  color: #045865;
+}
+
+.release-label.tips {
+  border-color: #fbbf24;
+  background-color: #fff9e6;
+  color: #7a4e00;
+}
+
+
+/* =====================================
+   関連記事ブロック（ボックス表示）
+===================================== */
+
+.related-articles-block {
+  margin-top: 2.5em;
+  padding: 1.5em;
+  background-color: #f7fafd;
+  border: 2px solid #0073aa;
+  border-radius: 12px;
+}
+
+.related-articles-block h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: #1c2739;
+}
+
+.related-articles {
+  list-style: none;
+  padding-left: 1em;
+  margin: 0;
+}
+
+.related-articles li {
+  margin-bottom: 0.6em;
+  position: relative;
+  padding-left: 1.4em;
+}
+
+.related-articles li::before {
+  content: '▶︎';
+  position: absolute;
+  left: 0;
+  color: #0073aa;
+  font-size: 0.9em;
+}
+
+.related-articles a {
+  text-decoration: none;
+  color: #0073aa;
+  font-weight: 600;
+}
+
+.related-articles a:hover {
+  text-decoration: underline;
+}
+
+
+/* ===============================
+   カード型記事・画像2カラム等（共通）
+=============================== */
+
+.related-card {
+  margin: 2em 0;
+  border: 1px solid #e0e4ea;
+  background-color: #f8fafd;
+  border-radius: 6px;
+  transition: box-shadow 0.3s;
+}
+
+.related-card a {
+  text-decoration: none;
+  color: #1c2739;
+  display: block;
+  padding: 1em;
+}
+
+.related-card-inner {
+  display: flex;
+  align-items: center;
+}
+
+.related-card-icon {
+  color: #00b5b8;
+  font-size: 1.5em;
+  margin-right: 0.75em;
+}
+
+.related-card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.related-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.release-change-box {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.release-change-title {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #005fcc;
+}
+
+.release-change-body {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.release-image-two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 2em 0;
+}
+
+.release-image-two-columns .image-column {
+  flex: 1 1 48%;
+}
+
+.release-image-two-columns img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .release-image-two-columns .image-column {
+    flex: 1 1 100%;
+  }
+}
+
+/* 左カラム内の画像をカラム幅に収める */
+.single-release .main-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

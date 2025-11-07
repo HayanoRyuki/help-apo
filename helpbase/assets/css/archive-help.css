@@ -1,0 +1,31 @@
+.help-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.help-item .help-title a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00B5E2; /* Aeroブルーでリンク強調 */
+}
+
+.help-item .help-title a:hover {
+  color: #00B7B1; /* CTAグリーンでホバー */
+}
+
+.help-meta .term {
+  display: inline-block;
+  background: #4AC1E0; /* 明るめブルー背景 */
+  color: #0E131F;       /* 黒寄りの文字色 */
+  padding: 2px 6px;
+  margin-right: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.help-excerpt {
+  font-size: 14px;
+  color: #38405F; /* 補助テキスト色 */
+}
